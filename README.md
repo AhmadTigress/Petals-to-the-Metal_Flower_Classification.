@@ -49,8 +49,8 @@ The dataset contains the following flower categories:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/petals-to-the-metal.git
-   cd petals-to-the-metal
+   git clone https://github.com/your-username/Petals to the Metal_Flower_Classification.git
+   cd Petals to the Metal_Flower_Classification
 
 2. Install dependencies:
    ```bash
