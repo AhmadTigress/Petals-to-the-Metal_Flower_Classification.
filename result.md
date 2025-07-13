@@ -35,3 +35,21 @@
     - Labels are correctly mapped (e.g., CLASS_NAMES matches dataset folders).
 
     - Images are properly decoded (e.g., decode_image normalizes to [0, 1] but ResNet50 expects preprocess_input).
+
+
+  --------------
+
+  ## Recommended Fixes
+1. **Unfreeze Base Model**
+   ```python
+   base_model.trainable = True  # Fine-tune all layers
+   ```
+   - Retrain with a lower learning rate (e.g., 1e-4) to avoid catastrophic forgetting
+2. **Adjust Architecture**
+
+  - Replace the small dense layer (Dense(8)) with a larger one (e.g., Dense(256)).
+
+  - Add dropout (Dropout(0.5)) to prevent overfitting.
+3. **Simplify Learning Rate**
+
+  - Replace exponential decay with a constant LR (e.g., 0.001) for initial debugging
