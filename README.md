@@ -11,6 +11,16 @@ Flower classification using Tensor Processing Unit(TPU) in Colab enviroment
 
 This project demonstrates how to build a flower classification model using TensorFlow and transfer learning with ResNet50. The dataset consists of 3,670 images across five flower categories. The model is trained on Google Colab with optional TPU acceleration for improved performance.
 
+---
+
+## ⚠️ Important Note  
+This script (`petals_to_the_metal_flower_classification.py`) was developed and tested in **Google Colab**. If running locally, you may encounter differences due to:  
+- **TPU/GPU dependencies**: Remove TPU-specific code if no accelerator is available.  
+- **File paths**: Adjust paths (e.g., `/content/...`) to match your local environment.  
+- **Google Drive mounting**: Replace `drive.mount()` with local dataset paths.  
+
+---
+
 ## Features
 
 - **Dataset**: Uses the [Flower Photos dataset](https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz) from TensorFlow.
@@ -49,6 +59,14 @@ The dataset contains the following flower categories:
    - The dataset is automatically downloaded in the notebook from TensorFlow Datasets.
 
 ## Usage
+##A. Google Colab
+- Upload the .py file to Colab.
+
+- Replace !cp /content/drive/MyDrive/... with your dataset path.
+
+- Run all cells (skip TPU setup if unused).
+
+  --------------
 1. Open the notebook in Google Colab or Jupyter:
    ```bash
    jupyter notebook Petals_to_the_Metal_Flower_Classification.ipynb
